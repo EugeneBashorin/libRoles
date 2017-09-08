@@ -1,0 +1,17 @@
+﻿@model LibraryProject.Models.Newspaper
+@{
+    ViewBag.Title = "Delete a newspaper";
+}
+<h3>Delete a newspaper</h3>
+<h4>Are you sure you want to delete this?</h4>
+<div>
+    <p>@Html.DisplayFor(model => model.Name)</p>
+    <p>@Html.DisplayFor(model => model.Category)</p>
+    <p>@Html.DisplayFor(model => model.Publisher)</p>
+    <p>@Html.DisplayFor(model => model.Price)</p>
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="YES" class="button" />
+        @Html.ActionLink("NO", "Index", "Home", new { @class = "button" });
+    }
+</div>

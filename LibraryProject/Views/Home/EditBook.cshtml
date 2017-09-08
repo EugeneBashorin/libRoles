@@ -1,0 +1,23 @@
+﻿@using LibraryProject.Models;
+@model Book
+@{
+    ViewBag.Title = "Edit a book";
+}
+<h4>Edit a book</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Author)
+    @Html.EditorFor(model => model.Author)
+    @Html.LabelFor(model => model.Publisher)
+    @Html.EditorFor(model => model.Publisher)
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price)
+    @Html.HiddenFor(model => model.Id)
+    <input type="submit" class="button" value="Save">
+}
+<div>
+    @Html.ActionLink("Back to list", "Index", "Home", new { }, new { @class = "button" })
+</div>
+

@@ -1,0 +1,14 @@
+﻿@model LibraryProject.Models.CreateRoleModel
+
+<h2>Create roles</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.ValidationSummary(true, "")
+        <p>Name:  @Html.EditorFor(model => model.Name)</p>
+        <p>Description: @Html.EditorFor(model => model.Description)</p>
+        <p><input type="submit" value="Create" /></p>
+    </div>
+}

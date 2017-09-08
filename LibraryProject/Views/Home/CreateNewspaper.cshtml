@@ -1,0 +1,21 @@
+﻿@using LibraryProject.Models;
+@model Newspaper
+@{
+    ViewBag.Title = "Create newspaper";
+}
+<h4>Add a newspaper</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)<br />
+    @Html.EditorFor(model => model.Name)<br />
+    @Html.LabelFor(model => model.Category)<br />
+    @Html.EditorFor(model => model.Category)<br />
+    @Html.LabelFor(model => model.Publisher)<br />
+    @Html.EditorFor(model => model.Publisher)<br />
+    @Html.LabelFor(model => model.Price)<br />
+    @Html.EditorFor(model => model.Price)<br />
+    <input type="submit" class="button" value="Add">
+}
+<div>
+    @Html.ActionLink("Back to list", "Index", "Home", new { }, new { @class = "button" })
+</div>

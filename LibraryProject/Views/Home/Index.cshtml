@@ -1,0 +1,16 @@
+﻿@using LibraryProject.Models;
+@model IndexModel
+
+@{
+    ViewBag.Title = "Library";
+}
+@Html.ActionLink("Edit account", "Edit", "Account")<br />
+@Html.ActionLink("Delete account", "Delete", "Account")<br />
+
+@ViewBag.Result
+<h4>Books</h4>
+@Html.Partial("BookPartial", Model.Books)
+<h4>Magazines</h4>
+@Html.Partial("MagazinePartial", Model.Magazines)
+<h4>Newspapers</h4>
+@Html.Partial("NewspaperPartial", Model.Newspapers)

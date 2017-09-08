@@ -1,0 +1,32 @@
+﻿@model LibraryProject.Models.Magazine
+@{
+    ViewBag.Title = "Show a magazine";
+}
+
+<h4>Show a magazine</h4>
+<table class="table">
+    <tr>
+        <th align="left">Name</th>
+        <th align="left">Category</th>
+        <th align="left">Publisher</th>
+        <th align="left">Price</th>
+    </tr>
+    <tr>
+        <td align="left">
+            @Model.Name
+        </td>
+        <td align="left">
+            @Model.Category
+        </td>
+        <td align="left">
+            @Model.Publisher
+        </td>
+        <td align="left">
+            @Model.Price.ToString()
+        </td>
+    </tr>
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home", new { }, new { @class = "button" })
+</div>
